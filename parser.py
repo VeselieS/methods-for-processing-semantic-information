@@ -31,7 +31,7 @@ async def get_page_urls(session):
 
             # Ограничение на парсинг только 5 первых страниц сайта (100 статей)
             # max_page = max(pages)
-            max_page = 1
+            max_page = 5
             return [PAGE_URL(page_number) for page_number in range(min_page, max_page + 1)]
         else:
             print('Ошибка при запросе:', response.status)
@@ -55,14 +55,14 @@ async def get_article_content(url, session):
         if response.status == 200:
             content = await response.text()
             soup = BeautifulSoup(content, 'html.parser')
-            title = soup.find('h1').text
+            title = soup.find('h1').text.strip()
             body = [p.text for p in soup.find('body').find_all('p')][3:-19]
             body = ' '.join(body)
             category = [a.get_text(separator='\n', strip=True) for a in soup.find(class_='terms-items grid')][3::2]
             comments = [comment.text.strip() for comment in soup.find(class_='shesht-comments-list-tab').find_all(
                 class_='shesht-comment-template__content-text')]
             created_date = soup.find('meta', property='article:published_time').get('content')[:10]
-            index_importance = soup.find(class_='index_importance_news').text
+            index_importance = soup.find(class_='index_importance_news').text if soup.find(class_='index_importance_news') else None
             views = soup.find(class_='fvc-count').text.replace(' ', '')
 
             return {

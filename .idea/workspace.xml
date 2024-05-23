@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27e028cb-7d24-47eb-8320-84d461279526" name="Changes" comment="try_1">
-      <change afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+    <list default="true" id="27e028cb-7d24-47eb-8320-84d461279526" name="Changes" comment="complete parser.py">
+      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,12 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715951062286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="complete parser.py">
+      <option name="closed" value="true" />
+      <created>1716428187736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716428187736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create repository" />
     <MESSAGE value="try_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="try_1" />
+    <MESSAGE value="complete parser.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete parser.py" />
   </component>
 </project>
