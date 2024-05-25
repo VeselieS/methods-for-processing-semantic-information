@@ -29,9 +29,12 @@ async def get_page_urls(session):
             pages = [int(page) for page in pages if page != '…']
             min_page = min(pages)
 
-            # Ограничение на парсинг только 5 первых страниц сайта (100 статей)
+            
             # max_page = max(pages)
-            max_page = 5
+            # Ограничение на парсинг только 5 первых страниц сайта (100 статей)
+            # max_page = 5
+            # Ограничение на парсинг только первой страницы сайта (20 статей)
+            max_page = 1
             return [PAGE_URL(page_number) for page_number in range(min_page, max_page + 1)]
         else:
             print('Ошибка при запросе:', response.status)
